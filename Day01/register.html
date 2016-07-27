@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="registerstyles.css" />
+</head>
+<body bgcolor=white>
+    <div class="reg-form">
+        <h3>Регистрация</h3>
+        <form action="">
+            <fieldset>
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="samlpe@site.com">
+            </fieldset>
+
+
+            <fieldset>
+                <label for="login">Логин:</label>
+                <input type="text" id="login" name="login">
+            </fieldset>
+
+            <fieldset>
+                <label for="password">Пароль:</label>
+                <input type="text" id="password">
+            </fieldset>
+
+            <fieldset>
+                <label for="gender">Пол:</label>
+                <input type="radio" checked="checked" id="gender" name="gender" value="women"> Женщина
+                <input type="radio" id="gender" name="gender" value="men"> Мужчина
+            </fieldset>
+
+            <fieldset>
+                <label for="name">Настоящее имя:</label>
+                <input type="text" id="name">
+            </fieldset>
+
+            <fieldset>
+                <label for="year">Дата рождения:</label>
+                <select size="1" id="year">
+                    <option value="2016" selected="selected">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                </select>
+                -
+                <select size="1" name="month">
+                    <option value="01" selected="selected">january</option>
+                    <option value="02">february</option>
+                    <option value="03">march</option>
+                </select>
+                -
+                <select size="1" name="day">
+                    <option value="1" selected="selected">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <label for="city">Место жительства:</label>
+                <select size="1" id="city" placeholder="sity">
+                    <option value="1" selected="selected">Луганск</option>
+                    <option value="2">Минск</option>
+                    <option value="3">Другой город</option>
+                </select>
+            </fieldset>
+            <div class="reg-btn">
+                <button type="submit">Зарегистрироваться</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

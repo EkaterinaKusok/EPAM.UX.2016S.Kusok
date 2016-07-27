@@ -1,0 +1,66 @@
+﻿body {
+    background-image: url("fon_skazki.gif");
+    background-repeat: repeat;
+    margin: 20px 0;
+    padding: 0;
+}
+
+div.all-field {
+    background-color: cornsilk;
+    border: 2px solid orange;
+    border-radius: 30px;
+    width: 700px;
+    margin: 0 auto;
+}
+div.footer-img {
+    height: 60px;
+    width: auto;
+    background-image: url("mir_skazki_glavnaja.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+}
+
+h1, p {
+    padding: 0 15px 0 20px;
+    text-indent: 20px; /* Отступ первой строки в пикселах */
+}
+
+h3 {
+    color: darkslategrey;
+    padding: 0 5px 0 5px;
+    margin: 5px 0;
+    text-indent: 20px; /* Отступ первой строки в пикселах */
+}
+
+pre {
+    padding: 0 15px 0 20px;
+    text-align: center;
+}
+
+ul {
+    margin: 0 20px;
+    color: darkslateblue;
+}
+
+    h1:first-letter,
+    p:first-letter,
+    pre:first-letter {
+        color:darkred; 
+        font-size: larger;
+    }
+
+.text-type1 {
+    font-family: arial, verdana, sans-serif;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.text-type2 {
+    font-family: "Times New Roman", serif;
+    font-variant: small-caps;
+    font-size: 1em;
+}
+  

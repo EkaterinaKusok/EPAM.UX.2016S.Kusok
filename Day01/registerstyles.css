@@ -2,7 +2,7 @@
     background-color: black;
 }
 
-h3 {
+h1 {
     color: black;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -18,12 +18,13 @@ label {
     display: inline-block;
 }
 
-fieldset {
+fieldset.reg-field {
     border: none;
-    border-bottom: 1px dotted blue;
+    border-bottom: 1px dashed blue;
+    padding: 5px;
 }
 
-div.reg-form {
+div.reg-all-fields {
     background-color: lightblue;
     width: 500px;
     margin: 0 auto;

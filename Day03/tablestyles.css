@@ -1,0 +1,25 @@
+﻿body{
+	margin: 20px 50px;
+}
+.table{
+	display: table;
+	border: 1px solid silver;
+}
+.label{
+	background-color: white;
+	display: table-row;
+	font-weight: bold;
+}
+.row1{
+	background-color: white;
+	display: table-row;	
+}
+.row2{
+	background-color: gainsboro;	
+	display: table-row;	
+}
+.cell{
+	display: table-cell;
+	padding: 5px 10px;	
+	border-top: 1px solid silver;
+}

@@ -1,0 +1,21 @@
+﻿body{
+	margin:0 20px;
+	padding:0;
+}
+.class1, .class2, .class3, .class4{
+    position: relative; /* Относительное позиционирование // in static z-index doesn't work*/
+}
+.class1, .class3 {	
+    font-size: 50px; /* Размер шрифта в пикселах */
+    color: #000080; /* Синий цвет текста */
+}
+.class2, .class4 {
+    top: -125px; /* Сдвигаем текст вверх */
+    left: 5px; /* Сдвигаем текст вправо */
+    color: #ffa500; /* Оранжевый цвет текста */
+    font-size:70px;  /* Размер шрифта в пикселах */
+}
+.class1 { z-index: 2; }
+.class2 { z-index: 1; }
+.class3 { z-index: 3; }
+.class4 { z-index: 4; }

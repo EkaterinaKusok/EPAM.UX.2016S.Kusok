@@ -1,0 +1,20 @@
+﻿body{
+	margin:0;
+	padding:0;
+}
+
+p{
+	padding-top:125px;
+	text-align:center;
+	font-size: 50px;/*real size 100px*/
+}
+
+.block {
+    width: 300px;
+    height: 400px;
+    position: fixed;/*absolute*/
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -150px;    
+    background-color: lightblue;
+}

@@ -1,0 +1,67 @@
+﻿body{
+	margin: 0;
+}
+
+table.page {
+	width:100%;	
+}
+table.header{
+	width:100%;
+	border: 1px solid black;	
+}
+
+table{		
+	border-collapse: collapse;	
+	width:100%;
+}
+tr, td{	 
+	~border: 1px solid black;
+	margin: 0;
+ }
+ 
+table.company{	
+	background-color: lightgray;
+} 
+table.menu { 
+	width:100%;
+	background-color: #2F2E2E;
+	color:white;
+}
+
+table.central-part{
+	width:100%;
+	height: auto;
+}
+
+td.navigation-bar{	
+	width:25%;	
+}
+table.navigation-bar{
+	width:100%;
+	border: 10px solid lightgray;	
+	background-color: #2F2E2E;
+	color:white;	
+	margin-top:10px;
+}
+.navigation-bar td{
+	padding: 10px 0;
+	text-align: center;
+}
+
+td.content{	
+	width:75%;	
+}
+table.content{	
+	width:100%;	
+	margin-left:10px;
+}
+.content h3{
+	color: #2F2E2E;
+}
+
+.footer p{	
+	background-color: lavender;
+	height:30px;	
+	margin:0;
+	text-align: center;	
+}

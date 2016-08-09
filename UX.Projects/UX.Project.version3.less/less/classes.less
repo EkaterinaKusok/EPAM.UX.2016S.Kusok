@@ -51,6 +51,7 @@ body {
         padding: @section-label-padding;
         font-size: @font-size-medium;
         word-spacing: 1px;
+		line-height:30px;
         text-transform:uppercase;
 		.text-overflow-ellipsis;
     }
@@ -79,12 +80,12 @@ body {
     .name {
         display:inline-block;
         margin-left: 15px;
-        margin-top: 111px;
+		margin-top: 111px;
 
         h1 {
             margin: 0;
             color: black;
-            font-size: 60px;
+            font-size: 59px;
             letter-spacing: -2.9px;
         }
 
@@ -117,6 +118,7 @@ body {
     margin-top: 50px;
 
     form{
+		display:inline-block;
         margin-top: 27px;
     }
 
@@ -128,7 +130,7 @@ body {
 
     .input-text {
         display:inline-block;
-        min-width: 212px;
+        /*min-width: 212px;*/
         max-width: 300px;
         font-size: @font-size-medium;
         font-family:@font;
@@ -241,7 +243,6 @@ body {
 	.column-style;
 
     ul {
-        /*margin-top: 50px; */ 
         padding:0;      
         list-style-type: none;
     }
@@ -325,5 +326,5 @@ body {
 }
 
 .contact-item.right a::before {
-    content: url("../content/mail.gif");
+    content: url("../content/mail.png");
 }

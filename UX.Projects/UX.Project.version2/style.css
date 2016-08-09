@@ -376,7 +376,7 @@ body{
     content:url("content/telephone.png");
 }
 .contact-item.right a::before {
-    content:url("content/mail.gif");
+    content:url("content/mail.png");
 }
 .contact-item.center{
     margin-left: 15px;

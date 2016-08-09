@@ -1,16 +1,14 @@
-.left-column {	
-    margin:20px;
-    float: left;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-.right-column {
-    margin:20px;	
-    float: left;
-}
-
-html,
 body {
     height: 100%;
+    background: url(../content/background.jpg);
+    font-family: @font-bold;
+    font-size: @font-size-medium;
+    word-wrap: break-word;
 }
 
 .container {
@@ -35,51 +33,38 @@ body {
 }
 
 
-body {
-    background: url(../content/background.jpg);
-    font-family: @fonts;
-    font-size: 20px;
-    word-wrap: break-word;
-}
-
 .main-container {
     background: white;
     max-width: 1240px;
     margin-top: 30px;
-    padding-top: 70px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;    
+    padding: @main-container-padding;
     box-shadow: 0px 8px 15px 0 gray;
 }
 
-
-
 .section-label {
-    background-color: #dbdbdb;
-	vertical-align:top;
+    background-color: @additional-color;
+    width:100%;
     h3 {
         margin: 0;
-        padding: 3px 20px 0 18px;
-        font-size: 20px;
+        padding: @section-label-padding;
+        font-size: @font-size-medium;
         word-spacing: 1px;
-		white-space: nowrap; 
-		overflow: hidden; 
-		text-overflow: ellipsis;
+        text-transform:uppercase;
+		.text-overflow-ellipsis;
     }
 }
 
-
 .section.header {
-    /*width: 100%;*/
-    height: 231px;
-
+    min-width: 600px;
+    min-height: 231px;
     .red-rectangle {
-        display: inline-block;
-        float: left;
+        float:left;
         margin: 0;
         width: 302px;
         height: 231px;
-        background-color: #cf4541;
+        background-color: @main-color;
     }
 
     .white-rectangle {
@@ -92,8 +77,7 @@ body {
     }
 
     .name {
-        display: inline-block;		
-        float: left;
+        display:inline-block;
         margin-left: 15px;
         margin-top: 111px;
 
@@ -107,52 +91,47 @@ body {
         h2 {
             margin-top: -6px;
             margin-left: 5px;
-            color: #cf4541;
+            color: @main-color;
             font-size: 42px;
-            font-family: "MyriadProRegular", Arial, sans-serif;
+            font-family: @font;
             letter-spacing: -3.3px;
             word-spacing: 2.5px;
         }
     }
 }
 
-
 .section.about {
-	.left-column;
+	.column-style;
 
     p {
         margin: 0;
         padding: 7px 0 20px 0;
-        font-size: 15.5pt;
-        letter-spacing: 0px;
+        font-size: @font-size-medium;
         word-spacing: 1px;
         line-height: 25.5px;
     }
 }
 
-.section.personal-data {
-	.right-column;
+.section.personal-data {	
+    .column-style;
     margin-top: 50px;
 
-    .section-content {
+    form{
         margin-top: 27px;
     }
 
-    .form-row {
-        padding: -3px 0;
-    }
-
     .property-label {
-        display: inline-block;
-        width: 160px;
+        max-width: 300px;
         font-size: 20px;
         letter-spacing: 0.5px;
     }
 
     .input-text {
-        display: inline-block;
-        width: 240px;
-        font: 20px "MyriadProRegular";
+        display:inline-block;
+        min-width: 212px;
+        max-width: 300px;
+        font-size: @font-size-medium;
+        font-family:@font;
         color: black;
         background: white;
         border: none;
@@ -166,9 +145,9 @@ body {
     width: 118px;
 
     h4 {
-        font-family: "MyriadProRegular";
+        font-family: @font;        
+        font-size: @font-size-large;    
         margin-top: 0px;
-        font-size: 28px;
         letter-spacing: 0px;
         word-spacing: 1px;
         line-height: 25.5px;
@@ -177,7 +156,8 @@ body {
 
 .cell-content {
     display: inline-block;
-    font: 24px "MyriadProRegular";
+    font-family: @font;        
+    font-size: 24px;
     letter-spacing: 2.4px;
     word-spacing: 1.9px;
     line-height: 24px;
@@ -186,7 +166,7 @@ body {
 
     h4 {
         margin: 0;
-        color: #cf4541;
+        color: @main-color;
     }
 
     h5 {
@@ -201,60 +181,49 @@ body {
 }
 
 
-.section.education {
-	.right-column;
-
+.section.education,
+.section.work-experience{
+    .column-style;
     ul {
         list-style-type: none;
         padding: 0px;
         margin-top: 40px;
     }
-
-    li {
-        margin: 24px 0 27px 0;
-        width: 100%;
+    li{
+        width: 100%;        
+        margin: 24px 0 27px 0; 
+        &::before{
+            display: inline-block;
+            float: left;
+            width: 40px;
+            width: 25px;
+            height: 25px;
+            background: #cf4541;
+            margin: 5px 0 0 15px;
+            /* Rotate */
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            /* Rotate Origin */
+            -webkit-transform-origin: 0 100%;
+            -moz-transform-origin: 0 100%;
+            -ms-transform-origin: 0 100%;
+            -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            /*align:center;*/
+            content: "";
+        }
     }
-}
-
-
-.section.education li::before,
-.section.work-experience li::before {
-    display: inline-block;
-    float: left;
-    width: 40px;
-    width: 25px;
-    height: 25px;
-    background: #cf4541;
-    margin: 5px 0 0 15px;
-    /* Rotate */
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    /* Rotate Origin */
-    -webkit-transform-origin: 0 100%;
-    -moz-transform-origin: 0 100%;
-    -ms-transform-origin: 0 100%;
-    -o-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-    /*align:center;*/
-    content: "";
+    
 }
 
 
 .section.work-experience {
-	.left-column;
-
-    ul {
-        list-style-type: none;
-        padding: 0px;
-        margin-top: 50px;
-    }
 
     li {
         margin: 18px 0 0 0;
-        width: 100%;
     }
 
     .cell-year {
@@ -269,80 +238,56 @@ body {
 }
 
 .section.skills {
-	.right-column;
+	.column-style;
 
     ul {
-        margin-top: 50px;
+        /*margin-top: 50px; */ 
+        padding:0;      
+        list-style-type: none;
     }
 
     li {
-        margin: 12px 0;
+        padding: 23px 0;
         width: 100%;
-    }
 
-    li:nth-child(4n) {
-        margin-bottom: 50px;
+        &:nth-child(4n) {
+            padding-bottom: 65px;
+        }
     }
 
     .cell-label {
-        display: inline-block;
-        width: 180px;
-        font-size: 21px;
-        line-height: 37px;
+        font-size: @font-size-medium;
     }
 }
 
-.progress {
-    display: inline-block;
-    width: 190px;
-    vertical-align: center;
+.percent100 {    
+    .progress(100%, @main-color);
 }
 
-.progress-bar {
-    position: relative;
-    top: 5px;
-    height: 25px;
-    background-color: lightgray;
+.percent95 {
+    .progress(95%, @main-color);
 }
 
-.progress-status {
-    height: 100%;
-    position: absolute;
-    background-color: #cf4541;
+.percent90 {
+    .progress(90%, @main-color);
 }
 
-.progress-status.percent100 {
-    width: 100%;
+.percent75 {
+    .progress(75%, @main-color);
 }
 
-.progress-status.percent95 {
-    width: 95%;
+.percent65 {
+    .progress(65%, @main-color);
 }
 
-.progress-status.percent90 {
-    width: 90%;
-}
-
-.progress-status.percent75 {
-    width: 75%;
-}
-
-.progress-status.percent65 {
-    width: 65%;
-}
-
-.progress-status.percent60 {
-    width: 60%;
+.percent60 {
+    .progress(60%, @main-color);
 }
 
 .contacts {
     width: 100%;
-    display: inline-block;
-	
-    margin-left: 20px;
-    margin-right: 20px;
-	
-    margin-bottom: 50px;
+    display: inline-block;	
+    margin:@contacts-margin;
 }
 
 .contact-item {
@@ -353,25 +298,25 @@ body {
     a {
         vertical-align: top;
         display: inline-block;
-        color: #cf4541;
-        font: 30px "MyriadProBold";
+        color: @main-color;
+        font-size: 30px;
         letter-spacing: -0.5px;
         text-decoration: none;
+
+        &::before{
+            position: relative;
+            top: 18px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: @main-color;
+            display: inline-block;
+            align: center;
+        }
     }
 }
 
-
-.contact-item.left a::before,
-.contact-item.center a::before,
-.contact-item.right a::before {
-    position: relative;
-    top: 18px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: #cf4541;
-    display: inline-block;
-    align: center;
+.contact-item.left a::before{    
     content: url("../content/twitlogo.png");
 }
 

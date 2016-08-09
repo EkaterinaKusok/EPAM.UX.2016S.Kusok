@@ -1,0 +1,16 @@
+/*Mixins*/
+.text-overflow-ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.progress(@progress:100%, @color:@additional-color) {
+	background-color: @color;
+	width:@progress;
+}
+
+.column-style(@margin:@column-style-margin) {
+    margin: @column-style-margin;
+    /*float: left;*/
+}

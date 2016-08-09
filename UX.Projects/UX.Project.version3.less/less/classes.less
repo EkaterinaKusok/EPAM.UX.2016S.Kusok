@@ -4,18 +4,11 @@ html {
 }
 
 body {
-    /*height: 100%;*/
     background: url(../content/background.jpg);
     font-family: @font-bold;
     font-size: @font-size-medium;
     word-wrap: break-word;
 }
-/*
-.container {
-    position: relative;
-    min-height: 100%;
-}*/
-
 .content {
     padding-bottom: 110px;
 }
@@ -33,20 +26,27 @@ body {
 .section-label {
     background-color: @additional-color;
     width:100%;
-    h3 {
+	
+    h3 {	
+		.text-overflow-ellipsis;
         margin: 0;
         padding: @section-label-padding;
         font-size: @font-size-medium;
         word-spacing: 1px;
 		line-height:30px;
         text-transform:uppercase;
-		.text-overflow-ellipsis;
     }
 }
 
+.section{
+	.section-style;
+}
+
 .section.header {
+	.section-style(0px);
     min-width: 600px;
     min-height: 231px;
+	
     .red-rectangle {
         float:left;
         margin: 0;
@@ -72,36 +72,28 @@ body {
         h1 {
             margin: 0;
             color: black;
-            font-size: 59px;
-            letter-spacing: -2.9px;
+			.font-style(-2.9px, 0, 59px);
         }
 
         h2 {
             margin-top: -6px;
             margin-left: 5px;
             color: @main-color;
-            font-size: 42px;
-            font-family: @font;
-            letter-spacing: -3.3px;
-            word-spacing: 2.5px;
+			.font-style(-3.3px, 2.5px, 42px, @font);
         }
     }
 }
 
 .section.about {
-	.column-style;
-
     p {
         margin: 0;
         padding: 7px 0 20px 0;
-        font-size: @font-size-medium;
-        word-spacing: 1px;
+		.font-style(0, 1px, @font-size-medium);
         line-height: 25.5px;
     }
 }
 
-.section.personal-data {	
-    .column-style;
+.section.personal-data {
     margin-top: 50px;
 
     form{
@@ -110,16 +102,13 @@ body {
     }
 
     .property-label {
-        max-width: 300px;
-        font-size: 20px;
-        letter-spacing: 0.5px;
+        max-width: 300px;		
+		.font-style(0.5px, 0px, @font-size-medium);
     }
 
     .input-text {
-        display:inline-block;
         max-width: 300px;
-        font-size: @font-size-medium;
-        font-family:@font;
+		.font-style(0px, 0px, @font-size-medium, @font);
         color: black;
         background: white;
         border: none;
@@ -132,22 +121,16 @@ body {
     text-align: center;
     max-width: 118px;
 
-    h4 {
-        font-family: @font;        
-        font-size: @font-size-large;    
+    h4 {	
+		.font-style(0px, 1px, @font-size-large, @font);   
         margin-top: 0px;
-        letter-spacing: 0px;
-        word-spacing: 1px;
         line-height: 25.5px;
     }
 }
 
 .cell-content {
     display: inline-block;
-    font-family: @font;        
-    font-size: 24px;
-    letter-spacing: 2.4px;
-    word-spacing: 1.9px;
+	.font-style(2.4px, 1.9px, 24px, @font);
     line-height: 24px;
     padding: 0 0 0 27px;
     max-width: 228px;
@@ -168,10 +151,8 @@ body {
     }
 }
 
-
 .section.education,
 .section.work-experience{
-    .column-style;
     ul {
         list-style-type: none;
         padding: 0px;
@@ -209,7 +190,6 @@ body {
 
 
 .section.work-experience {
-
     li {
         margin: 18px 0 0 0;
     }
@@ -226,8 +206,6 @@ body {
 }
 
 .section.skills {
-	.column-style;
-
     ul {
         padding:0;      
         list-style-type: none;
@@ -285,9 +263,8 @@ body {
     a {
         vertical-align: top;
         display: inline-block;
-        color: @main-color;
-        font-size: 30px;
-        letter-spacing: -0.5px;
+        color: @main-color;		
+		.font-style(-0.5px, 0px, 30px);
         text-decoration: none;
 
         &::before{

@@ -40,79 +40,151 @@ body {
 
 .section{
 	.section-style;
-}
-
-.section.header {
-	.section-style(0px);
-    min-width: 600px;
-    min-height: 231px;
 	
-    .red-rectangle {
-        float:left;
-        margin: 0;
-        width: 302px;
-        height: 231px;
-        background-color: @main-color;
-    }
+	&.header {
+		.section-style(0px);
+		min-width: 600px;
+		min-height: 231px;
+		
+		.red-rectangle {
+			float:left;
+			margin: 0;
+			width: 302px;
+			height: 231px;
+			background-color: @main-color;
+		}
 
-    .white-rectangle {
-        position: relative;
-        top: 20px;
-        left: 75px;
-        width: 195px;
-        height: 190px;
-        background-color: white;
-    }
+		.white-rectangle {
+			position: relative;
+			top: 20px;
+			left: 75px;
+			width: 195px;
+			height: 190px;
+			background-color: white;
+		}
 
-    .name {
-        display:inline-block;
-        margin-left: 15px;
-		margin-top: 111px;
+		.name {
+			display:inline-block;
+			margin-left: 15px;
+			margin-top: 111px;
 
-        h1 {
-            margin: 0;
-            color: black;
-			.font-style(-2.9px, 0, 59px);
-        }
+			h1 {
+				margin: 0;
+				color: black;
+				.font-style(-2.9px, 0, 59px);
+			}
 
-        h2 {
-            margin-top: -6px;
-            margin-left: 5px;
-            color: @main-color;
-			.font-style(-3.3px, 2.5px, 42px, @font);
-        }
-    }
-}
+			h2 {
+				margin-top: -6px;
+				margin-left: 5px;
+				color: @main-color;
+				.font-style(-3.3px, 2.5px, 42px, @font);
+			}
+		}
+	}
+	
+	&.about {
+		p {
+			margin: 0;
+			padding: 7px 0 20px 0;
+			.font-style(0, 1px, @font-size-medium);
+			line-height: 25.5px;
+		}
+	}
 
-.section.about {
-    p {
-        margin: 0;
-        padding: 7px 0 20px 0;
-		.font-style(0, 1px, @font-size-medium);
-        line-height: 25.5px;
-    }
-}
+	&.personal-data {
+		margin-top: 50px;
 
-.section.personal-data {
-    margin-top: 50px;
+		form{
+			display:inline-block;
+			margin-top: 27px;
+		}
 
-    form{
-		display:inline-block;
-        margin-top: 27px;
-    }
+		.property-label {
+			max-width: 300px;		
+			.font-style(0.5px, 0px, @font-size-medium);
+		}
 
-    .property-label {
-        max-width: 300px;		
-		.font-style(0.5px, 0px, @font-size-medium);
-    }
+		.input-text {
+			max-width: 300px;
+			.font-style(0px, 0px, @font-size-medium, @font);
+			color: black;
+			background: white;
+			border: none;
+		}
+	}
+	
+	&.education,
+	&.work-experience{
+		ul {
+			list-style-type: none;
+			padding: 0px;
+			margin-top: 40px;
+		}
+		li{
+			width: 100%;        
+			margin: 24px 0 27px 0; 
+			&::before{
+				display: inline-block;
+				float: left;
+				width: 40px;
+				width: 25px;
+				height: 25px;
+				background: #cf4541;
+				margin: 5px 0 0 15px;
+				/* Rotate */
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				/* Rotate Origin */
+				-webkit-transform-origin: 0 100%;
+				-moz-transform-origin: 0 100%;
+				-ms-transform-origin: 0 100%;
+				-o-transform-origin: 0 100%;
+				transform-origin: 0 100%;
+				/*align:center;*/
+				content: "";
+			}
+		}    
+	}
 
-    .input-text {
-        max-width: 300px;
-		.font-style(0px, 0px, @font-size-medium, @font);
-        color: black;
-        background: white;
-        border: none;
-    }
+	&.work-experience {
+		li {
+			margin: 18px 0 0 0;
+		}
+
+		.cell-year {
+			min-width: 135px;
+		}
+
+		.cell-content {
+			line-height: 25px;
+			padding: 0 0 0 16px;
+			max-width: 413px;
+		}
+	}
+
+	&.skills {
+		ul {
+			padding:0;      
+			list-style-type: none;
+		}
+
+		li {
+			padding: 23px 0;
+			width: 100%;
+
+			&:nth-child(4n) {
+				padding-bottom: 65px;
+			}
+		}
+
+		.cell-label {
+			font-size: @font-size-medium;
+		}
+	}
 }
 
 .cell-year {
@@ -148,80 +220,6 @@ body {
         margin: 0;
         color: black;
         line-height: 27px;
-    }
-}
-
-.section.education,
-.section.work-experience{
-    ul {
-        list-style-type: none;
-        padding: 0px;
-        margin-top: 40px;
-    }
-    li{
-        width: 100%;        
-        margin: 24px 0 27px 0; 
-        &::before{
-            display: inline-block;
-            float: left;
-            width: 40px;
-            width: 25px;
-            height: 25px;
-            background: #cf4541;
-            margin: 5px 0 0 15px;
-            /* Rotate */
-            -webkit-transform: rotate(-45deg);
-            -moz-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            /* Rotate Origin */
-            -webkit-transform-origin: 0 100%;
-            -moz-transform-origin: 0 100%;
-            -ms-transform-origin: 0 100%;
-            -o-transform-origin: 0 100%;
-            transform-origin: 0 100%;
-            /*align:center;*/
-            content: "";
-        }
-    }
-    
-}
-
-
-.section.work-experience {
-    li {
-        margin: 18px 0 0 0;
-    }
-
-    .cell-year {
-        min-width: 135px;
-    }
-
-    .cell-content {
-        line-height: 25px;
-        padding: 0 0 0 16px;
-        max-width: 413px;
-    }
-}
-
-.section.skills {
-    ul {
-        padding:0;      
-        list-style-type: none;
-    }
-
-    li {
-        padding: 23px 0;
-        width: 100%;
-
-        &:nth-child(4n) {
-            padding-bottom: 65px;
-        }
-    }
-
-    .cell-label {
-        font-size: @font-size-medium;
     }
 }
 
@@ -278,18 +276,27 @@ body {
             align: center;
         }
     }
-}
-
-.contact-item.left a::before{    
-    content: url("../content/twitlogo.png");
-}
-
-.contact-item.center a::before {
-    content: url("../content/telephone.png");
-}
-
-.contact-item.right a::before {
-    content: url("../content/mail.png");
+	&.left{	
+		a{
+			&::before{    
+				content: url("../content/twitlogo.png");
+			}
+		}
+	}
+	&.center{	
+		a{
+			&::before{    
+				content: url("../content/telephone.png");
+			}
+		}
+	}
+	&.right{	
+		a{
+			&::before{    
+				content: url("../content/mail.png");
+			}
+		}
+	}
 }
 
 .footer {

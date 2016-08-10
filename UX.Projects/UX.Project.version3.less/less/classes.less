@@ -20,7 +20,7 @@ body {
     margin-left: auto;
     margin-right: auto;    
     padding: @main-container-padding;
-    box-shadow: 0px 8px 15px 0 gray;
+    box-shadow: 0 8px 15px 0 gray;
 }
 
 .section-label {
@@ -42,7 +42,7 @@ body {
 	.section-style;
 	
 	&.header {
-		.section-style(0px);
+		.section-style(0);
 		min-width: 600px;
 		min-height: 231px;
 		
@@ -102,12 +102,12 @@ body {
 
 		.property-label {
 			max-width: 300px;		
-			.font-style(0.5px, 0px, @font-size-medium);
+			.font-style(0.5px, 0, @font-size-medium);
 		}
 
 		.input-text {
 			max-width: 300px;
-			.font-style(0px, 0px, @font-size-medium, @font);
+			.font-style(0, 0, @font-size-medium, @font);
 			color: black;
 			background: white;
 			border: none;
@@ -118,7 +118,7 @@ body {
 	&.work-experience{
 		ul {
 			list-style-type: none;
-			padding: 0px;
+			padding: 0;
 			margin-top: 40px;
 		}
 		li{
@@ -194,8 +194,8 @@ body {
     max-width: 118px;
 
     h4 {	
-		.font-style(0px, 1px, @font-size-large, @font);   
-        margin-top: 0px;
+		.font-style(0, 1px, @font-size-large, @font);   
+        margin-top: 0;
         line-height: 25.5px;
     }
 }
@@ -262,7 +262,7 @@ body {
         vertical-align: top;
         display: inline-block;
         color: @main-color;		
-		.font-style(-0.5px, 0px, 30px);
+		.font-style(-0.5px, 0, 30px);
         text-decoration: none;
 
         &::before{
